@@ -12,7 +12,7 @@
         "build": "concurrently --kill-others --names \" uikitx ,  test  \" -c \"bgBlue,bgGreen\" \"npm run build:uikit\" \"npm run build:test\"",
         "install:uikit": "npm install",
         "install:test": "cd test && npm install",
-        "install:all": "npm run install:uikit & npm run install:all"
+        "install:all": "npm run install:uikit & npm run install:test"
     },
     "repository": {
         "type": "git",
@@ -41,6 +41,7 @@
         "concurrently": "^3.5.1",
         "react": "^16.4.0",
         "react-dom": "^16.4.0",
+        "uikit": "^3.0.0-rc.4",
         "webpack": "^4.10.2",
         "webpack-cli": "^2.1.4"
     },

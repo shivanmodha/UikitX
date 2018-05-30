@@ -24,5 +24,6 @@ module.exports = {
     },
     externals: {
         "react": "commonjs react",
+        "uikit": "commonjs uikit"
     }
 };
