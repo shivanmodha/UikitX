@@ -1,4 +1,4 @@
-import test from "./test.jsx";
-export default {
-    test
+import Test from "./test.jsx";
+export {
+    Test
 };

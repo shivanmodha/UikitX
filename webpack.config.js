@@ -1,14 +1,12 @@
-let path = require("path");
+const path = require("path");
 module.exports = {
-    entry: [
-        path.resolve(__dirname, "src", "index.js")
-    ],
+    entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "uikitx.js",
         libraryTarget: "commonjs2"
     },
-    mode: "development",
+    mode: "production",
     module: {
         rules: [
             {
@@ -25,6 +23,6 @@ module.exports = {
         ]
     },
     externals: {
-        "react": "commonjs react"
+        "react": "commonjs react",
     }
-}
+};
