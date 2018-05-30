@@ -2,9 +2,14 @@
     "name": "uikitx",
     "version": "1.0.0",
     "description": "React wrapper library for Uikit 3",
-    "main": "index.js",
+    "main": "dist/index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "dev:uikit": "webpack --watch",
+        "dev:test": "cd test && npm run start",
+        "dev": "npm run dev:uikit & npm run dev:test",
+        "build:uikit": "webpack",
+        "build:test": "cd test && npm run build",
+        "build": "npm run build:uikit & npm run build:test"
     },
     "repository": {
         "type": "git",
@@ -34,5 +39,9 @@
         "react-dom": "^16.4.0",
         "webpack": "^4.10.2",
         "webpack-cli": "^2.1.4"
+    },
+    "dependencies": {
+        "babel-preset-env": "^1.7.0",
+        "prop-types": "^15.6.1"
     }
 }
