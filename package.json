@@ -6,10 +6,10 @@
     "scripts": {
         "dev:uikit": "webpack --watch",
         "dev:test": "cd test && npm run start",
-        "dev": "npm run dev:uikit & npm run dev:test",
+        "dev": "concurrently --kill-others --names \" uikitx ,  test  \" -c \"bgBlue,bgGreen\" \"npm run dev:uikit\" \"npm run dev:test\"",
         "build:uikit": "webpack",
         "build:test": "cd test && npm run build",
-        "build": "npm run build:uikit & npm run build:test",
+        "build": "concurrently --kill-others --names \" uikitx ,  test  \" -c \"bgBlue,bgGreen\" \"npm run build:uikit\" \"npm run build:test\"",
         "install:uikit": "npm install",
         "install:test": "cd test && npm install",
         "install:all": "npm run install:uikit & npm run install:all"
@@ -38,6 +38,7 @@
         "babel-loader": "^7.1.4",
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
         "babel-plugin-transform-react-jsx": "^6.24.1",
+        "concurrently": "^3.5.1",
         "react": "^16.4.0",
         "react-dom": "^16.4.0",
         "webpack": "^4.10.2",

@@ -1,4 +1,4 @@
-import Test from "./test.jsx";
+import Button from "./button.jsx";
 export {
-    Test
+    Button
 };
