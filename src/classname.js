@@ -1,13 +1,43 @@
 class ClassName {
-    constructor() {
-        this.list = {};
+    constructor(attributes, object) {
+        this.convert = {};
         this.order = [];
+        this.list = {};
+        if (attributes) {
+            Object.keys(attributes).forEach((key) => {
+                if (key !== "order" && key !== "default") {
+                    this.convert[key] = (parameter) => {
+                        let _return = attributes[key][parameter];
+                        if (_return === "$default" || !_return) {
+                            _return = attributes["default"][key];
+                        }
+                        if (_return === "$value") {
+                            _return = parameter;
+                        }
+                        return _return;
+                    };
+                }
+            });
+            this.order = attributes["order"];
+            for (let i = 0; i < this.order.length; i++) {
+                this.list[this.order[i]] = attributes["default"][this.order[i]];
+            }
+        }
+        if (object) {
+            this.setObject(object);
+        }
     }
     set(key, item) {
-        this.order.push(key);
-        this.list[key] = item;
+        if (this.convert[key] && item) {
+            this.list[key] = this.convert[key](("" + item).toLowerCase());
+        }
     }
-    render() {
+    setObject(props) {
+        Object.keys(props).forEach((key) => {
+            this.set(key, props[key]);
+        });
+    }
+    toString() {
         let _return = "";
         for (let i = 0; i < this.order.length; i++) {
             _return += this.list[this.order[i]] + " ";

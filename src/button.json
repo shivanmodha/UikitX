@@ -1,0 +1,34 @@
+{
+    "order": [
+        "base",
+        "color",
+        "size"
+    ],
+    "default": {
+        "base": "uk-button",
+        "color": "uk-button-default",
+        "size": ""
+    },
+    "color": {
+        "": "$default",
+        "default": "$default",
+        "primary": "uk-button-primary",
+        "secondary": "uk-button-secondary",
+        "danger": "uk-button-danger",
+        "text": "uk-button-text",
+        "link": "uk-button-link"
+    },
+    "size": {
+        "": "$default",
+        "medium": "$default",
+        "normal": "$default",
+        "m": "$default",
+        "default": "$default",
+        "small": "uk-button-small",
+        "s": "uk-button-small",
+        "sm": "uk-button-small",
+        "large": "uk-button-large",
+        "l": "uk-button-large",
+        "lg": "uk-button-large"
+    }
+}
