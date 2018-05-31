@@ -1,5 +1,25 @@
 {
-    "order": [
-        
-    ]
+    "_order": [
+        "name-heading",
+        "name",
+        "ratio-heading",
+        "ratio"
+    ],
+    "_default": {
+        "name-heading": "icon:",
+        "name": "uikit",
+        "ratio-heading": "; ratio:",
+        "ratio": 1,
+        "button": "uk-icon-button"
+    },
+    "_error": {
+        "name": "$value",
+        "ratio": "$value"
+    },
+    "name": {
+        "": "$default"
+    },
+    "ratio": {
+        "": "$default"
+    }
 }

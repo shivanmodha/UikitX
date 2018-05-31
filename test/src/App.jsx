@@ -11,8 +11,7 @@ class App extends Component {
                 <Button color="text">Text</Button>
                 <Button color="link">Link</Button>
                 <ToTop />
-                <div><Icon icon="icon: lock; ratio: 1" /></div>
-                <span uk-icon="icon: check; ratio: 2"></span>
+                <Icon />
             </div>
         );
     }

@@ -1,10 +1,10 @@
 {
-    "order": [
+    "_order": [
         "base",
         "color",
         "size"
     ],
-    "default": {
+    "_default": {
         "base": "uk-button",
         "color": "uk-button-default",
         "size": ""

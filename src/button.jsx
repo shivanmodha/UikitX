@@ -23,7 +23,7 @@ class Button extends Component {
             className: ((this.state) ? (this.state.classname) : ("")),
             onClick: (this.props.onClick) ? (this.props.onClick) : (null),
         };
-        if (this.props.href) {
+        if (this.props.href) { 
             return (
                 <a href={this.props.href} {...props} style={{ ...this.props.style }}>
                     {this.props.children}    

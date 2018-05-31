@@ -5,11 +5,14 @@ class ClassName {
         this.list = {};
         if (attributes) {
             Object.keys(attributes).forEach((key) => {
-                if (key !== "order" && key !== "default") {
+                if (key !== "_order" && key !== "_default") {
                     this.convert[key] = (parameter) => {
                         let _return = attributes[key][parameter];
+                        if (!_return && attributes["_error"] && attributes["_error"][key]) {
+                            _return = attributes["_error"][key]
+                        }
                         if (_return === "$default" || !_return) {
-                            _return = attributes["default"][key];
+                            _return = attributes["_default"][key];
                         }
                         if (_return === "$value") {
                             _return = parameter;
@@ -18,9 +21,9 @@ class ClassName {
                     };
                 }
             });
-            this.order = attributes["order"];
+            this.order = attributes["_order"];
             for (let i = 0; i < this.order.length; i++) {
-                this.list[this.order[i]] = attributes["default"][this.order[i]];
+                this.list[this.order[i]] = attributes["_default"][this.order[i]];
             }
         }
         if (object) {

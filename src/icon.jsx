@@ -1,19 +1,28 @@
 import React, { Component } from "react";
+import UIkit from "uikit";
+import icons from "uikit/dist/js/uikit-icons.js";
 import attributes from "./icon.json";
 import ClassName from "./classname.js";
-
 class Icon extends Component {
     constructor(props) {
         super(props);
+        if (!window.UIkit) {
+            window.UIkit = UIkit;
+            UIkit.use(icons);
+        }   
     }
     componentWillMount() {
         this.setState({
-            classname: new ClassName(attributes, this.props)
+            ukName: new ClassName(attributes, this.props)
         });
     }
     render() {
+        let props = {
+            className: ((this.props.button) ? (attributes["_default"]["button"]) : ("")),
+            "uk-icon": ((this.state) ? (this.state.ukName) : (""))
+        }
         return (
-            <span uk-icon="icon: check; ratio: 2"></span>
+            <span {...props}></span>
         )
     }
 }
