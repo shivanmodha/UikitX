@@ -1,0 +1,32 @@
+{
+    "_order": [
+        "sub",
+        "accordion",
+        "primary",
+        "center",
+        "dropdown"
+    ],
+    "_default": {
+        "sub": "uk-nav uk-nav-default",
+        "accordion": "",
+        "multiple": "",
+        "primary": "",
+        "center": "",
+        "dropdown": ""
+    },
+    "sub": {
+        "true": "uk-nav-sub uk-nav-default"
+    },
+    "accordion": {
+        "true": "uk-nav-parent-icon"
+    },
+    "primary": {
+        "true": "uk-nav-primary"
+    },
+    "center": {
+        "true": "uk-nav-center"
+    },
+    "dropdown": {
+        "true": "uk-nav-dropdown"
+    }
+}

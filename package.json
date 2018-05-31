@@ -36,8 +36,10 @@
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
         "babel-plugin-transform-react-jsx": "^6.24.1",
         "concurrently": "^3.5.1",
+        "css-loader": "^0.28.11",
         "react": "^16.4.0",
         "react-dom": "^16.4.0",
+        "style-loader": "^0.21.0",
         "uikit": "^3.0.0-rc.4",
         "webpack": "^4.10.2",
         "webpack-cli": "^2.1.4"

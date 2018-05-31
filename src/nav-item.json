@@ -1,0 +1,26 @@
+{
+    "_order": [
+        "active",
+        "parent",
+        "header",
+        "divider"
+    ],
+    "_default": {
+        "active": "",
+        "parent": "",
+        "header": "",
+        "divider": ""
+    },
+    "active": {
+        "true": "uk-active"
+    },
+    "parent": {
+        "true": "uk-parent"
+    },
+    "header": {
+        "true": "uk-nav-header"
+    },
+    "divider": {
+        "true": "uk-nav-divider"
+    }
+}

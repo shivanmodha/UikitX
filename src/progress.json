@@ -1,0 +1,8 @@
+{
+    "_order": [
+        "base"
+    ],
+    "_default": {
+        "base": "uk-progress"
+    }
+}
