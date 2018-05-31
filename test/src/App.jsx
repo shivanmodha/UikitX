@@ -12,6 +12,7 @@ class App extends Component {
                 <Button color="link">Link</Button>
                 <ToTop />
                 <Icon />
+                <Button href="#" type="icon" color="link"><Icon/></Button>
             </div>
         );
     }
