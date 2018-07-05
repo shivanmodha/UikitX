@@ -12,7 +12,8 @@ class App extends Component {
                 <Button color="link">Link</Button>
                 <ToTop />
                 <Icon />
-                <Button href="#" type="icon" color="icon"><Icon/></Button>
+                <Icon name="table"/>
+                <Button href="#" type="icon" color="icon"><Icon name="table"/></Button>
                 <Button href="#" type="icon" color="text" style={{ borderRadius: 0 }}><Icon/></Button>
                 <Progress value={10} max={20} />
                 <div style={{ marginLeft: 50, width: 300 }}>
