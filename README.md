@@ -36,7 +36,7 @@ export default class Example extends React.Component {
 | Color    | Button color style       | default, primary, secondary, danger, text, link, icon | `<Button color="danger">Danger</Button> ` |
 | Size     | Size of  button          | default, medium, small, large                         | `<Button size="medium">Medium</Button> `  |
 | href     | `<button>` or `<a>`      | Any string                                            | `<Button href="#">Button</Button>`        |
-
+> All other props, such as `onClick` and `style`, will be passed to the underlying uikit object
 ## Icon
 Basic usage
 ```jsx
@@ -70,8 +70,10 @@ export default class Example extends React.Component {
     }
 }
 ```
+> Notice the `href` tag added to the button. Icon buttons look better when wrapped in a link rather than a standard button. The default `onClick` listener can still be accessed.
 #### Properties
 | Property | Description              | Types                                                 | Examples                                              |
 | -------- | ------------------------ | ----------------------------------------------------- | ---------------------------------------- |
 | Name     | Name of the icon    | Any icon defined in uikit's standard icon set              | `<Icon name="table" />`                   |
 | Ratio    | Size of the icon    | Any integer                                                | `<Icon ratio={2} />`                       |
+> All other props, such as `onClick` and `style`, will be passed to the underlying uikit object
