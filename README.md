@@ -3,6 +3,7 @@ React wrapper library for Uikit 3, currently in beta
 
 # Documentation
 ## Button
+Basic usage
 ```jsx
 import { Button } from "uikitx";
 export default class Example extends React.Component {
@@ -37,6 +38,7 @@ export default class Example extends React.Component {
 | href     | `<button>` or `<a>`      | Any string                                            | `<Button href="#">Button</Button>`        |
 
 ## Icon
+Basic usage
 ```jsx
 import { Icon } from "uikitx";
 export default class Example extends React.Component {
@@ -51,6 +53,20 @@ export default class Example extends React.Component {
                 <Icon ratio={3} name="table" />
             </div>
         );
+    }
+}
+```
+You can also wrap icons around a button to create an icon button
+```jsx
+import { Button, Icon } from "uikitx";
+export default class Example extends React.Component {
+    render() {
+        return (
+            <div className="Icon Buttons">
+                <Button><Icon /></Button>
+                <Button href="#" type="icon" color="icon"><Icon name="table"/></Button>
+            </div>
+        )
     }
 }
 ```
