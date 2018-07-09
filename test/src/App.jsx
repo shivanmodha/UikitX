@@ -6,16 +6,19 @@ class App extends Component {
             <div className="App">
                 <Button>Default</Button>
                 <Button href="#" color="primary">Primary</Button>
-                <Button size="large" color="secondary">Secondary</Button>
+                <Button size="small" color="secondary">Secondary</Button>
                 <Button color="danger">Danger</Button>
                 <Button color="text">Text</Button>
                 <Button color="link">Link</Button>
                 <ToTop />
                 <Icon />
-                <Icon name="table"/>
+                <Icon name="table" />
+                <Icon ratio={2} />
+                <Icon ratio={2} name="table" />
+                <br/>
                 <Button href="#" type="icon" color="icon"><Icon name="table"/></Button>
-                <Button href="#" type="icon" color="text" style={{ borderRadius: 0 }}><Icon/></Button>
-                <Progress value={10} max={20} />
+                <Button href="#" type="icon" color="text" style={{ borderRadius: 0 }}><Icon /></Button>
+                <Progress value={10} max={50} />
                 <div style={{ marginLeft: 50, width: 300 }}>
                     <Nav accordion multiple primary>
                         <NavItem header>Navigation Header</NavItem>    

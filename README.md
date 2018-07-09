@@ -3,22 +3,59 @@ React wrapper library for Uikit 3, currently in beta
 
 # Documentation
 ## Button
-#### Example
 ```jsx
 import { Button } from "uikitx";
 export default class Example extends React.Component {
     render() {
         return (
             <div className="Buttons">
+                {/* Color Attributes */}
                 <Button>Default</Button>
+                <Button color="primary">Primary</Button>
+                <Button color="secondary">Secondary</Button>
+                <Button color="danger">Danger</Button>
+                <Button color="text">Text</Button>
+                <Button color="link">Link</Button>
+                {/* Size Attributes */}
+                <Button size="large">Large</Button>
+                <Button size="medium">Medium</Button>
+                <Button size="small">Small</Button>
+                {/* Type Attributes */}
+                <Button type="default">Default</Button>
+                <Button type="icon">Icon Button</Button>
             </div>
-        )
+        );
     }
 }
 ```
 #### Properties
-| Property | Description              | Types                                                 | Examples                                 |
+| Property | Description              | Types                                                 | Examples                                              |
 | -------- | ------------------------ | ----------------------------------------------------- | ---------------------------------------- |
 | Type     | Type of button to render | default, normal, icon                                 | `<Button type="default">Default</Button>` |
 | Color    | Button color style       | default, primary, secondary, danger, text, link, icon | `<Button color="danger">Danger</Button> ` |
-| Size     | Size of  button          | default, medium, small                                | `<Button size="medium">Medium</Button> `  |
+| Size     | Size of  button          | default, medium, small, large                         | `<Button size="medium">Medium</Button> `  |
+| href     | `<button>` or `<a>`      | Any string                                            | `<Button href="#">Button</Button>`        |
+
+## Icon
+```jsx
+import { Icon } from "uikitx";
+export default class Example extends React.Component {
+    render() {
+        return (
+            <div className="Icons">
+                {/* Name Attribute */}
+                <Icon />
+                <Icon name="table" />
+                {/* Ratio Attribute */}
+                <Icon ratio={2} />
+                <Icon ratio={3} name="table" />
+            </div>
+        );
+    }
+}
+```
+#### Properties
+| Property | Description              | Types                                                 | Examples                                              |
+| -------- | ------------------------ | ----------------------------------------------------- | ---------------------------------------- |
+| Name     | Name of the icon    | Any icon defined in uikit's standard icon set              | `<Icon name="table" />`                   |
+| Ratio    | Size of the icon    | Any integer                                                | `<Icon ratio={2} />`                       |
