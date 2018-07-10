@@ -77,3 +77,19 @@ export default class Example extends React.Component {
 | Name     | Name of the icon    | Any icon defined in uikit's standard icon set              | `<Icon name="table" />`                   |
 | Ratio    | Size of the icon    | Any integer                                                | `<Icon ratio={2} />`                       |
 > All other props, such as `onClick` and `style`, will be passed to the underlying uikit object
+
+## ToTop
+Basic usage
+```jsx
+import { ToTop } from "uikitx";
+export default class Example extends React.Component {
+    render() {
+        return (
+            <div className="ToTop">
+                <ToTop />
+            </div>
+        );
+    }
+}
+```
+> There isn't much to this element
