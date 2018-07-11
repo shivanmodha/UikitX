@@ -1,8 +1,22 @@
 {
     "_order": [
-        "base"
+        "base",
+        "value",
+        "max"
     ],
     "_default": {
-        "base": "uk-progress"
+        "base": "uk-progress",
+        "value": "50",
+        "max": "100"
+    },
+    "_error": {
+        "value": "$value",
+        "max": "$value"
+    },
+    "value": {
+        "": "$default",
+    },
+    "max": {
+        "": "$default"
     }
 }

@@ -93,3 +93,18 @@ export default class Example extends React.Component {
 }
 ```
 > There isn't much to this element
+
+## Progress
+Basic usage
+```jsx
+import { Progress } from "uikitx";
+export default class Example extends React.Component {
+    render() {
+        return (
+            <div className="Progress">
+                <Progress value={10} max={50} />
+            </div>
+        );
+    }
+}
+```

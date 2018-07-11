@@ -18,9 +18,7 @@ class Progress extends Component {
     }
     render() {
         let props = {
-            className: ((this.state) ? (this.state.classname) : ("")),
-            value: ((this.props.value) ? (this.props.value) : (50)),
-            max: ((this.props.max) ? (this.props.max) : (100))
+            className: ((this.state) ? (this.state.classname) : (""))
         }
         return (
             <progress {...props} style={{ color: "red" }} />

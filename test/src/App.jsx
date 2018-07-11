@@ -18,7 +18,7 @@ class App extends Component {
                 <br/>
                 <Button href="#" type="icon" color="icon"><Icon name="table"/></Button>
                 <Button href="#" type="icon" color="text" style={{ borderRadius: 0 }}><Icon /></Button>
-                <Progress value={10} max={50} />
+                <Progress value={10} max={100} />
                 <div style={{ marginLeft: 50, width: 300 }}>
                     <Nav accordion multiple primary>
                         <NavItem header>Navigation Header</NavItem>    
