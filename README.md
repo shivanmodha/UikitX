@@ -102,9 +102,15 @@ export default class Example extends React.Component {
     render() {
         return (
             <div className="Progress">
+                <Progress />
                 <Progress value={10} max={50} />
             </div>
         );
     }
 }
 ```
+#### Properties
+| Property | Description              | Types                                                 | Examples                                              |
+| -------- | ------------------------ | ----------------------------------------------------- | ---------------------------------------- |
+| Value    | Value of the progress    | Any integer                                           | `<Progress value={50} />`                   |
+| Max      | Max value of progress    | Any integer                                           | `<Progress max={100} />` |

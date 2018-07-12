@@ -21,7 +21,7 @@ class Progress extends Component {
             className: ((this.state) ? (this.state.classname) : (""))
         }
         return (
-            <progress {...props} style={{ color: "red" }} />
+            <progress {...props} style={{ ...this.props.style }} />
         )
     }
 }
