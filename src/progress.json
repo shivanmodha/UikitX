@@ -14,7 +14,7 @@
         "max": "$value"
     },
     "value": {
-        "": "$default",
+        "": "$default"
     },
     "max": {
         "": "$default"

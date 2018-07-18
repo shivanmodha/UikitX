@@ -112,5 +112,5 @@ export default class Example extends React.Component {
 #### Properties
 | Property | Description              | Types                                                 | Examples                                              |
 | -------- | ------------------------ | ----------------------------------------------------- | ---------------------------------------- |
-| Value    | Value of the progress    | Any integer                                           | `<Progress value={50} />`                   |
-| Max      | Max value of progress    | Any integer                                           | `<Progress max={100} />` |
+| Value    | Value of the progress    | Any integer                                           | `<Progress value={50} />`                |
+| Max      | Max value of progress    | Any integer                                           | `<Progress max={100} />`                 |
