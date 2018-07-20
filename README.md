@@ -1,6 +1,17 @@
 # UikitX
 React wrapper library for Uikit 3, currently in beta
 
+### Adding UiKit
+Install uikit from NPM. UikitX does not include UiKit CSS so this needs to be installed:
+```
+npm install --save uikit
+npm install --save https://github.com/shivanmodha/UikitX
+```
+Import UiKit CSS in the `src/index.js` file:
+```
+import "uikit/dist/css/uikit.min.css";
+```
+And you are good to go!
 # Documentation
 ## Button
 Basic usage
