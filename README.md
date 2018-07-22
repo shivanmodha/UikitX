@@ -125,3 +125,51 @@ export default class Example extends React.Component {
 | -------- | ------------------------ | ----------------------------------------------------- | ---------------------------------------- |
 | Value    | Value of the progress    | Any integer                                           | `<Progress value={50} />`                |
 | Max      | Max value of progress    | Any integer                                           | `<Progress max={100} />`                 |
+
+## Navigation Bar
+Basic usage
+```jsx
+import { Icon, Nav, NavItem, NavLink } from "uikitx";
+export default class Example extends React.Component {
+    render() {
+        return (
+            <div style={{ marginLeft: 50, width: 300 }}>
+                <Nav accordion multiple primary>
+                    <NavItem header>Navigation Header</NavItem>    
+                    <NavItem active><NavLink>Active</NavLink></NavItem>
+                    <NavItem parent>
+                        <NavLink>Parent</NavLink>
+                        <Nav sub accordion>
+                            <NavItem active><NavLink>Active Child</NavLink></NavItem>
+                            <NavItem><NavLink>Child</NavLink></NavItem>
+                            <NavItem parent>
+                                <NavLink>Parent</NavLink>
+                                <Nav sub center>
+                                    <NavItem active><NavLink>Active Child</NavLink></NavItem>
+                                    <NavItem><NavLink>Child</NavLink></NavItem>
+                                </Nav>
+                            </NavItem>
+                            <NavItem parent>
+                                <NavLink>Parent</NavLink>
+                                <Nav sub>
+                                    <NavItem active><NavLink>Active Child</NavLink></NavItem>
+                                    <NavItem><NavLink>Child</NavLink></NavItem>
+                                </Nav>
+                            </NavItem>
+                        </Nav>
+                    </NavItem>
+                    <NavItem parent icon>
+                        <NavLink>Parent</NavLink>
+                        <Nav sub>
+                            <NavItem><NavLink>Active Child</NavLink></NavItem>
+                            <NavItem><NavLink>Child</NavLink></NavItem>
+                        </Nav>
+                    </NavItem>
+                    <NavItem divider />
+                    <NavItem><NavLink><Icon name="table" style={{ marginRight: 10 }} />Icon Link</NavLink></NavItem>
+                </Nav>
+            </div>
+        );
+    }
+}
+```
