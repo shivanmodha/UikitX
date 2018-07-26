@@ -1,0 +1,11 @@
+{
+    "_order": [
+        "logo"
+    ],
+    "_default": {
+        "logo": ""
+    },
+    "logo": {
+        "true": "uk-navbar-item uk-logo"
+    }
+}

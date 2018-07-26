@@ -1,0 +1,17 @@
+{
+    "_order": [
+        "container",
+        "transparent"
+    ],
+    "_default": {
+        "container": "uk-navbar uk-navbar-container",
+        "transparent": ""
+    },
+    "_error": {
+        "container": "$default",
+        "transparent": "$default"
+    },
+    "transparent": {
+        "true": "uk-navbar-transparent"
+    }
+}

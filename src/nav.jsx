@@ -26,11 +26,28 @@ class Nav extends Component {
                 props["uk-nav"] = "multiple: true";
             }
         }
-        return (
+        let innerNav = (
             <ul {...props}>
                 {this.props.children}    
             </ul>
-        )
+        );
+        let navTypes = {
+            "left": "uk-navbar-left",
+            "center": "uk-navbar-center",
+            "right": "uk-navbar-right"
+        };
+        if (this.props && this.props.navbar && navTypes[this.props.navbar]) {
+            return (
+                <div className={navTypes[this.props.navbar]}>{innerNav}</div>
+            );
+        } else if (this.props && this.props.navbar && this.props.dropdown) {
+            props.className = props.className.toString().replace("uk-nav-dropdown", "uk-navbar-dropdown-nav").replace("uk-navbar-nav", "").trim();
+            return (
+                <div className="uk-navbar-dropdown"><ul {...props}>{this.props.children}</ul></div>
+            );
+        } else {
+            return innerNav;
+        }
     }
 }
 export default Nav;

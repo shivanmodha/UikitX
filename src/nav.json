@@ -1,6 +1,7 @@
 {
     "_order": [
         "sub",
+        "navbar",
         "accordion",
         "primary",
         "center",
@@ -8,6 +9,7 @@
     ],
     "_default": {
         "sub": "uk-nav uk-nav-default",
+        "navbar": "",
         "accordion": "",
         "multiple": "",
         "primary": "",
@@ -16,6 +18,12 @@
     },
     "sub": {
         "true": "uk-nav-sub uk-nav-default"
+    },
+    "navbar": {
+        "true": "uk-navbar-nav",
+        "left": "uk-navbar-nav",
+        "right": "uk-navbar-nav",
+        "center": "uk-navbar-nav"
     },
     "accordion": {
         "true": "uk-nav-parent-icon"

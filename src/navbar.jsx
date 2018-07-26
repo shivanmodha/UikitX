@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import attributes from "./progress.json";
+import attributes from "./navbar.json";
 import ClassName from "./classname.js";
-class Progress extends Component {
+class Navbar extends Component {
     constructor(props) {
         super(props);
     }
@@ -18,13 +18,14 @@ class Progress extends Component {
     }
     render() {
         let props = {
-            className: ((this.state) ? (this.state.classname) : ("")),
-            value: ((this.props && this.props.value) ? (this.props.value) : (50)),
-            max: ((this.props && this.props.max) ? (this.props.max) : (100))
-        }
+            className: ((this.state) ? (this.state.classname) : (null)),
+            "uk-navbar": ((this.props && this.props.click) ? ("mode: click") : (""))
+        };
         return (
-            <progress {...props} style={{ ...this.props.style }} />
+            <nav {...props}>
+                {this.props.children}
+            </nav>
         )
     }
 }
-export default Progress;
+export default Navbar

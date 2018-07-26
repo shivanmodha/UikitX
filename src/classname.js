@@ -45,7 +45,12 @@ class ClassName {
         for (let i = 0; i < this.order.length; i++) {
             _return += this.list[this.order[i]] + " ";
         }
-        return _return.trim();
+        _return = _return.trim();
+        if (_return.length > 1) {
+            return _return;
+        } else {
+            return "";
+        }
     }
 }
 export default ClassName;
