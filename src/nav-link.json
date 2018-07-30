@@ -1,11 +1,16 @@
 {
     "_order": [
-        "logo"
+        "logo",
+        "toggle"
     ],
     "_default": {
-        "logo": ""
+        "logo": "",
+        "toggle": ""
     },
     "logo": {
         "true": "uk-navbar-item uk-logo"
+    },
+    "toggle": {
+        "true": "uk-navbar-toggle"
     }
 }

@@ -22,7 +22,7 @@ class Navbar extends Component {
             "uk-navbar": ((this.props && this.props.click) ? ("mode: click") : (""))
         };
         return (
-            <nav {...props}>
+            <nav {...props} style={{...this.props.style}}>
                 {this.props.children}
             </nav>
         )

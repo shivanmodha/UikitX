@@ -93,6 +93,23 @@ class App extends Component {
                         <NavItem><NavLink><Icon name="table" style={{ marginRight: 10 }} />Icon Link</NavLink></NavItem>
                     </Nav>
                 </div>
+                <Navbar style={{ height: 50 }}>
+                    <Nav navbar="left">
+                        <NavLink toggle><Icon name="menu" style={{ marginRight: 5 }} />Menu</NavLink>
+                    </Nav>
+                    <Nav navbar="center">
+                        <Nav navbar="nav-left">
+                            <NavItem><NavLink>CenterLeft</NavLink></NavItem>
+                        </Nav>
+                        <NavLink logo>Brand</NavLink>
+                        <Nav navbar="nav-right">
+                            <NavItem><NavLink>CenterRight</NavLink></NavItem>
+                        </Nav>
+                    </Nav>
+                    <Nav navbar="right">
+                        <NavLink toggle>Menu<Icon name="menu" style={{ marginLeft: 5 }} /></NavLink>
+                    </Nav>
+                </Navbar>
             </div>
         );
     }

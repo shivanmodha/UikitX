@@ -18,7 +18,8 @@ class NavLink extends Component {
     }
     render() {
         let props = {
-            className: ((this.state) ? (this.state.classname) : (null))
+            className: ((this.state) ? (this.state.classname) : (null)),
+            href: ((this.props && this.props.href) ? (this.props.href) : "#")
         };
         let child = this.props.children;
         if (this.props && this.props.subtitle) {
@@ -30,7 +31,7 @@ class NavLink extends Component {
             )
         }
         return (
-            <a {...props} {...this.props}>{child}</a>
+            <a {...props}>{child}</a>
         )
     }
 }

@@ -34,7 +34,9 @@ class Nav extends Component {
         let navTypes = {
             "left": "uk-navbar-left",
             "center": "uk-navbar-center",
-            "right": "uk-navbar-right"
+            "right": "uk-navbar-right",
+            "nav-left": "uk-navbar-center-left",
+            "nav-right": "uk-navbar-center-right"
         };
         if (this.props && this.props.navbar && navTypes[this.props.navbar]) {
             return (
