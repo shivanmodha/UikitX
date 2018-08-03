@@ -25,7 +25,8 @@
         "right": "uk-navbar-nav",
         "center": "uk-navbar-nav",
         "nav-left": "uk-navbar-nav",
-        "nav-right": "uk-navbar-nav"
+        "nav-right": "uk-navbar-nav",
+        "grid": "uk-navbar-dropdown-nav"
     },
     "accordion": {
         "true": "uk-nav-parent-icon"

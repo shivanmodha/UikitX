@@ -7,6 +7,7 @@ import Nav from "./nav.jsx";
 import NavItem from "./nav-item.jsx";
 import NavLink from "./nav-link.jsx";
 import Navbar from "./navbar.jsx";
+import NavGrid from "./nav-grid.jsx";
 import "uikit/dist/js/uikit.min.js";
 export {
     Button,
@@ -16,5 +17,6 @@ export {
     Nav,
     NavItem,
     NavLink,
-    Navbar
+    Navbar,
+    NavGrid
 };

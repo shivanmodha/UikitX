@@ -17,15 +17,29 @@ class Navbar extends Component {
         });
     }
     render() {
+        let navbar = ((this.props && this.props.click) ? ("mode: click; ") : (""));
+        navbar += ((this.props && this.props.dropbar) ? ("dropbar: true; ") : (""));
+        navbar += ((this.props && this.props.push) ? ("dropbar-mode: push; ") : (""));
         let props = {
             className: ((this.state) ? (this.state.classname) : (null)),
-            "uk-navbar": ((this.props && this.props.click) ? ("mode: click") : (""))
+            "uk-navbar": navbar
         };
-        return (
-            <nav {...props} style={{...this.props.style}}>
-                {this.props.children}
-            </nav>
-        )
+        if (this.props && this.props.dropbar) {
+            return (
+                <div>
+                    <nav {...props} style={{ ...this.props.style }}>
+                        {this.props.children}
+                    </nav>
+                    <div className="uk-navbar-dropbar"/>
+                </div>
+            )
+        } else {
+            return (
+                <nav {...props} style={{...this.props.style}}>
+                    {this.props.children}
+                </nav>
+            )
+        }
     }
 }
 export default Navbar

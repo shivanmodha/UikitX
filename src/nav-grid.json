@@ -1,0 +1,29 @@
+{
+    "_order": [
+        "outerbase",
+        "width",
+        "divider",
+        "innerbase",
+        "childwidth"
+    ],
+    "_default": {
+        "outerbase": "uk-navbar-dropdown",
+        "width": "",
+        "divider": " | ",
+        "innerbase": "uk-navbar-dropdown-grid",
+        "childwidth": ""
+    },
+    "_error": {
+        "outerbase": "$default",
+        "width": "uk-navbar-dropdown-width-$value",
+        "divider": "$default",
+        "innerbase": "$default",
+        "childwidth": "uk-child-width-1-$value"
+    },
+    "width": {
+        "true": "uk-navbar-dropdown-width-2"
+    },
+    "childwidth": {
+        "true": "uk-child-width-1-2"
+    }
+}

@@ -17,6 +17,9 @@ class ClassName {
                         if (_return === "$value") {
                             _return = parameter;
                         }
+                        while (_return.includes("$value")) {
+                            _return = _return.replace("$value", parameter);
+                        }
                         return _return;
                     };
                 }

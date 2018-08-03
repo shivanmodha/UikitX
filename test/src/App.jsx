@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { Button, ToTop, Icon, Progress, Nav, NavItem, NavLink, Navbar } from "uikitx";
+import { Button, ToTop, Icon, Progress, Nav, NavItem, NavGrid, NavLink, Navbar } from "uikitx";
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <Navbar click transparent>
+                <Navbar click transparent dropbar push>
                     <Nav navbar="left">
                         <NavLink logo>Brand</NavLink>
                         <NavItem><NavLink>Left</NavLink></NavItem>
@@ -42,6 +42,13 @@ class App extends Component {
                         <NavItem><NavLink>Right</NavLink></NavItem>
                     </Nav>
                 </Navbar>
+                <h1>Heading 1</h1>
+                <h1 className="uk-heading-primary">Heading 1</h1>
+                <h1 className="uk-heading-hero">Heading 1</h1>
+                <h1 className="uk-heading-primary uk-heading-divider uk-heading-bullet uk-heading-line"><span>Heading 1</span></h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
                 <Button>Default</Button>
                 <Button href="#" color="primary">Primary</Button>
                 <Button size="small" color="secondary">Secondary</Button>
@@ -93,13 +100,53 @@ class App extends Component {
                         <NavItem><NavLink><Icon name="table" style={{ marginRight: 10 }} />Icon Link</NavLink></NavItem>
                     </Nav>
                 </div>
-                <Navbar style={{ height: 50 }}>
+                <Navbar dropbar style={{ height: 50 }}>
                     <Nav navbar="left">
                         <NavLink toggle><Icon name="menu" style={{ marginRight: 5 }} />Menu</NavLink>
                     </Nav>
                     <Nav navbar="center">
                         <Nav navbar="nav-left">
-                            <NavItem><NavLink>CenterLeft</NavLink></NavItem>
+                            <NavItem>
+                                <NavLink>CenterLeft</NavLink>
+                                <NavGrid width={2} childwidth={2}>
+                                    <Nav navbar="grid" accordion>
+                                        <NavItem active><NavLink>Active Child</NavLink></NavItem>
+                                        <NavItem><NavLink>Child</NavLink></NavItem>
+                                        <NavItem parent>
+                                            <NavLink>Parent</NavLink>
+                                            <Nav sub center>
+                                                <NavItem active><NavLink>Active Child</NavLink></NavItem>
+                                                <NavItem><NavLink>Child</NavLink></NavItem>
+                                            </Nav>
+                                        </NavItem>
+                                        <NavItem parent>
+                                            <NavLink>Parent</NavLink>
+                                            <Nav sub>
+                                                <NavItem active><NavLink>Active Child</NavLink></NavItem>
+                                                <NavItem><NavLink>Child</NavLink></NavItem>
+                                            </Nav>
+                                        </NavItem>
+                                    </Nav>
+                                    <Nav navbar="grid" accordion>
+                                        <NavItem active><NavLink>Active Child</NavLink></NavItem>
+                                        <NavItem><NavLink>Child</NavLink></NavItem>
+                                        <NavItem parent>
+                                            <NavLink>Parent</NavLink>
+                                            <Nav sub center>
+                                                <NavItem active><NavLink>Active Child</NavLink></NavItem>
+                                                <NavItem><NavLink>Child</NavLink></NavItem>
+                                            </Nav>
+                                        </NavItem>
+                                        <NavItem parent>
+                                            <NavLink>Parent</NavLink>
+                                            <Nav sub>
+                                                <NavItem active><NavLink>Active Child</NavLink></NavItem>
+                                                <NavItem><NavLink>Child</NavLink></NavItem>
+                                            </Nav>
+                                        </NavItem>
+                                    </Nav>
+                                </NavGrid>
+                            </NavItem>
                         </Nav>
                         <NavLink logo>Brand</NavLink>
                         <Nav navbar="nav-right">
